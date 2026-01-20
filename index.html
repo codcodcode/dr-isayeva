@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Aysel   İsayeva | Həkim-Kosmetoloq</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+    <header class="fixed w-full top-0 z-50 backdrop-blur-lg border-b border-opacity-10 transition-colors" style="border-color: var(--text)">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="text-xl sm:text-2xl font-bold tracking-widest uppercase">
+                Dr. Aysel İsayeva 
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-8 font-medium">
+                <a href="#home" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    Ana Səhifə
+                </a>
+                <a href="#about" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Haqqımda
+                </a>
+                <a href="#services" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 8v8m-4-4h8"/></svg>
+                    Xidmətlərim
+                </a>
+                <a href="#contact" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Əlaqə
+                </a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <div class="theme-toggle" onclick="toggleTheme()">
+                    <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m12.72-12.72l-1.41 1.41"/></svg>
+                    <div class="toggle-circle"></div>
+                    <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="consult-popup">
+        <span class="close-popup" onclick="closePopup()">✕</span>
+        <h4 class="font-bold mb-2">Sualınız var?</h4>
+        <p class="text-sm mb-4 opacity-80">Buyurun, konsultasiyaya yazılın və dərhal cavab alın.</p>
+        <a href="https://wa.me/994705575699" target="_blank" class="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl pulse-whatsapp font-bold">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            WhatsApp
+        </a>
+    </div>
+
+    <section id="home" class="min-h-screen pt-32 lg:pt-0 flex flex-col lg:flex-row items-center container mx-auto px-6">
+        <div class="lg:w-1/2 mb-12 lg:mb-0 flex justify-center order-2 lg:order-1">
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[450px] md:h-[450px]">
+                <div class="absolute inset-0 border-2 border-current rounded-full animate-pulse opacity-20"></div>
+                <div class="absolute inset-4 overflow-hidden rounded-full shadow-2xl border-4 border-current">
+<img src="doctor.jpg" alt="Dr. Aysel" ... class="object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+        <div class="lg:w-1/2 text-center lg:text-left space-y-6 sm:space-y-8 order-1 lg:order-2">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold uppercase tracking-tight">Dr. Aysel   İsayeva</h1>
+            <div class="h-10">
+                <span class="typewriter text-xl sm:text-2xl md:text-3xl font-light italic">həkim - kosmetoloq</span>
+            </div>
+            <p class="text-base sm:text-xl opacity-80 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                Peşəkar kosmetologiya xidmətləri ilə dərinin təbii parlaqlığını və gəncliyini bərpa edirik.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <a href="#contact" class="btn-modern text-sm sm:text-lg font-bold uppercase tracking-widest">Konsultasiya</a>
+                <a href="#services" class="btn-modern text-sm sm:text-lg font-bold uppercase tracking-widest border-opacity-50">Xidmətlərim</a>
+            </div>
+        </div>
+    </section>
+
+  <section id="about" class="py-20 sm:py-32 container mx-auto px-6 reveal">
+        <div class="grid lg:grid-cols-2 gap-12 sm:gap-20 items-center">
+            <div class="space-y-8 order-2 lg:order-1">
+                <h2 class="text-4xl sm:text-5xl font-bold uppercase border-l-8 border-current pl-6">Haqqımda</h2>
+                <div class="space-y-6 text-base sm:text-lg opacity-90 leading-loose">
+                    <p>Mən Dr. Aysel İsayeva, dərinin sağlamlığı və estetik gözəlliyi üzrə ixtisaslaşmış mütəxəssisəm. 10 ildən çoxdur ki, estetik kosmetologiya sahəsində çalışıram.</p>
+                    <p>Məqsədim hər bir pasiyentin təbii gözəlliyini qoruyaraq ona özgüvən bəxş etməkdir.</p>
+                    <div class="grid grid-cols-2 gap-4 sm:gap-8 pt-6">
+                        <div><span class="text-3xl sm:text-4xl font-bold">10+</span><p class="uppercase text-xs tracking-widest opacity-60">İl Təcrübə</p></div>
+                        <div><span class="text-3xl sm:text-4xl font-bold">5000+</span><p class="uppercase text-xs tracking-widest opacity-60">Uğurlu prosedur</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 flex justify-center">
+                <div class="about-image-frame w-full max-w-sm">
+                    <div class="rounded-[30px] overflow-hidden h-80 sm:h-96 shadow-2xl">
+                        <img src="about_doctor.jpg" alt="Haqqımda" onerror="this.src='https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=800'" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-services py-20 sm:py-32 reveal">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl sm:text-5xl font-bold uppercase text-center mb-16 sm:mb-20">Xidmətlərim</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="service-card p-8 rounded-[40px] group flex flex-col">
+                    <div class="mb-6 p-4 border-2 border-current rounded-2xl w-fit group-hover:bg-white group-hover:text-[#0097b2] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5z"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">ÜZ BAXIMI VƏ TƏMİZLƏNMƏ</h3>
+                    <ul class="space-y-2 text-sm sm:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>• Peşəkar üz təmizlənməsi</li>
+                        <li>• Mexaniki üz təmizlənməsi</li>
+                        <li>• Ultrasəs (scrubber) ilə üz təmizlənməsi</li>
+                        <li>• Dəri tipinə uyğun kompleks üz baxımı</li>
+                        <li>• Sakitləşdirici və bərpaedici maskalar</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-8 rounded-[40px] group flex flex-col">
+                    <div class="mb-6 p-4 border-2 border-current rounded-2xl w-fit group-hover:bg-white group-hover:text-[#0097b2] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">APARAT KOSMETOLOGİYASI</h3>
+                    <ul class="space-y-2 text-sm sm:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>• RF lifting (üz üçün)</li>
+                        <li>• Üz üçün RF + Kavitasiya</li>
+                        <li>• Üz konturunun formalaşdırılması</li>
+                        <li>• Çənəaltı (ikiqat çənə) azalması</li>
+                        <li>• Üzdə şişkinliyin azaldılması</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-8 rounded-[40px] group flex flex-col">
+                    <div class="mb-6 p-4 border-2 border-current rounded-2xl w-fit group-hover:bg-white group-hover:text-[#0097b2] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">PROBLEMLİ  DƏRİ</h3>
+                    <ul class="space-y-2 text-sm sm:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>• Akne müalicəsi</li>
+                        <li>• Postakne ləkə və izlərinin azaldılması</li>
+                        <li>• Qara nöqtələrin aradan qaldırılması</li>
+                        <li>• Problemli dəri üçün xüsusi protokollar</li>
+                        <li>• Həssas dəriyə qulluq</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-8 rounded-[40px] group flex flex-col">
+                    <div class="mb-6 p-4 border-2 border-current rounded-2xl w-fit group-hover:bg-white group-hover:text-[#0097b2] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h5v5c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">DƏRİ TÖRƏMƏLƏRİ</h3>
+                    <ul class="space-y-2 text-sm sm:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>• Ksantelazmanın aradan qaldırılması</li>
+                        <li>• Papilomaların müalicəsi</li>
+                        <li>• Kandilomaların müalicəsi</li>
+                        <li>• Hemangiomanın müalicəsi</li>
+                        <li>• Xoşxassəli törəmələrin götürülməsi</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-8 rounded-[40px] group flex flex-col">
+                    <div class="mb-6 p-4 border-2 border-current rounded-2xl w-fit group-hover:bg-white group-hover:text-[#0097b2] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">ESTETİK PROSEDURLAR</h3>
+                    <ul class="space-y-2 text-sm sm:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>• Dəri bərkidilməsi və tonuslanması</li>
+                        <li>• Dərinin elastikliyinin artırılması</li>
+                        <li>• Parlaqlıq və təravət verən prosedurlar</li>
+                        <li>• Fərdi dəri analizinə əsaslanan qulluq</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-8 rounded-[40px] group flex flex-col">
+                    <div class="mb-6 p-4 border-2 border-current rounded-2xl w-fit group-hover:bg-white group-hover:text-[#0097b2] transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">KONSULTASİYA</h3>
+                    <ul class="space-y-2 text-sm sm:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                        <li>• Dəri analizi</li>
+                        <li>• Fərdi müalicə və baxım planı</li>
+                        <li>• Prosedur öncəsi və sonrası məsləhətlər</li>
+                        <li>• Ev qulluğu üçün məhsul seçimi</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 sm:py-32 container mx-auto px-6 reveal">
+        <div class="max-w-5xl mx-auto border-4 border-current rounded-[40px] sm:rounded-[60px] p-8 sm:p-20 text-center">
+            <h2 class="text-3xl sm:text-5xl font-bold uppercase mb-8">Ətraflı Məlumat</h2>
+            <a href="https://wa.me/994705575699" target="_blank" class="inline-flex items-center gap-4 bg-[#25D366] text-white px-8 sm:px-10 py-5 sm:py-6 rounded-3xl text-xl sm:text-2xl font-bold hover:scale-105 transition-transform shadow-2xl pulse-whatsapp">
+                WhatsApp
+            </a>
+            <div class="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 uppercase text-xs sm:text-sm tracking-widest font-bold">
+
+                <div>+994 70 557 56 99</div>
+                <div>10:00 - 19:00</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-opacity-10 text-center opacity-60" style="border-color: var(--text)">
+        <p>© 2026 Dr. Aysel İsayeva. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

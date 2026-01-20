@@ -1,0 +1,161 @@
+:root {
+    --primary: #0097b2;
+    --bg: #ffffff;
+    --text: #0097b2;
+    --card-bg: #f0f9fa;
+    --transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --primary: #ffffff;
+    --bg: #0097b2;
+    --text: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color var(--transition), color var(--transition);
+    overflow-x: hidden;
+}
+
+/* Typewriter Animation */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid var(--text);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .05em;
+    animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--text); } }
+
+/* Menu Link Animations */
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 0;
+    transition: transform 0.3s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text);
+    transition: width 0.3s ease;
+}
+.nav-link:hover { transform: translateY(-2px); }
+.nav-link:hover::after { width: 100%; }
+
+/* Buttons */
+.btn-modern {
+    position: relative;
+    padding: 12px 28px;
+    border: 2px solid var(--text);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-modern::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 0;
+    background-color: var(--text);
+    transition: all 0.3s ease; z-index: -1;
+}
+.btn-modern:hover::after { height: 100%; }
+.btn-modern:hover { color: var(--bg) !important; }
+
+/* Popup Notification */
+#consult-popup {
+    position: fixed;
+    bottom: -200px;
+    right: 20px;
+    max-width: 320px;
+    background: var(--bg);
+    border: 2px solid var(--text);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: bottom 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#consult-popup.active { bottom: 20px; }
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    cursor: pointer; width: 70px; height: 35px;
+    background: var(--text); border-radius: 25px;
+    position: relative; display: flex; align-items: center;
+    justify-content: space-between; padding: 0 8px; transition: background 0.3s;
+}
+.toggle-circle {
+    width: 27px; height: 27px; background: var(--bg); border-radius: 50%;
+    position: absolute; left: 4px; z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+[data-theme="dark"] .toggle-circle { transform: translateX(35px); }
+
+/* General Animations */
+
+.pulse-whatsapp { animation: pulse 2s infinite; }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Section Services Design */
+.section-services {
+    background-color: var(--card-bg);
+    transition: background-color var(--transition);
+}
+
+.service-card { 
+    border: 2px solid var(--text); 
+    transition: all 0.4s ease; 
+    background: transparent;
+    height: 100%;
+}
+.service-card:hover { 
+    background: var(--text); 
+    color: var(--bg); 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* About Frame */
+.about-image-frame {
+    border: 3px solid var(--text);
+    padding: 15px;
+    border-radius: 40px;
+    position: relative;
+}
+.about-image-frame::before {
+    content: '';
+    position: absolute;
+    top: -10px; right: -10px; bottom: -10px; left: -10px;
+    border: 1px dashed var(--text);
+    border-radius: 50px;
+    z-index: -1;
+}
